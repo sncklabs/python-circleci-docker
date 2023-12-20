@@ -49,14 +49,15 @@ jobs:
       - run:
           name: Build and push to Docker Hub
           command: |
-            echo $DOCKER_HUB_USER_ID
-            echo $USER
             echo $IMAGE_NAME
+            echo $MYNAME
             docker build -t sncklabs/flaskdockerdemo:latest .
-            echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USER_ID" --password-stdin
+            echo "_1M02,C9m!&le" | docker login -u "sncklabs" --password-stdin
             docker push $DOCKER_HUB_USER_ID/$IMAGE_NAME:latest  
 
 #SC docker build -t $DOCKER_HUB_USER_ID/$IMAGE_NAME:latest .
+#SC echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USER_ID" --password-stdin
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
