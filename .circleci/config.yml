@@ -50,8 +50,6 @@ jobs:
           name: Build and push to Docker Hub
           command: |
             docker build -t sncklabs/flaskdockerdemo:latest .
-            echo "_1M02,C9m!&le" | docker login -u "sncklabs" --password-stdin
-            docker push sncklabs/flaskdockerdemo:latest  
 
 #SC docker build -t $DOCKER_HUB_USER_ID/$IMAGE_NAME:latest .
 #SC echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_USER_ID" --password-stdin
